@@ -7,14 +7,26 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+<div>
+
+    
+<div id="greeting"><form id="getName" class="form" onsubmit="displayGreeting(event)">
+    <label for="getName">What's your name?</label>
+    <input type="text" id="name" name="name" align="center" placeholder="Barbara Gordon" required 
+    minlength="4" maxLength="19"> 
+    <input name="letsGo" type="submit" value="let's go">
+</form></div> 
+
+</div>
 <body>
 
+    <div class="counter">
             <h1>&#8212; the count &#8212;</h1> <!-- used an emdash code -->
             <h2 id="count-el">0</h2>
             <button id="increment-btn" onclick="increment()">finished row</button>
             <button id="save-btn" onclick="save()">save the count</button>
             <p style="font-size: smaller;" id="save-el">history: </p><br>
             <button id="reset-btn" onclick="reset()">reset</button>
-
+        </div>
 </body>
 </html>
