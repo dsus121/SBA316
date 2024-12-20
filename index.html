@@ -7,7 +7,7 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<div>
+<header>
 
     
 <div id="greeting"><form id="getName" class="form" onsubmit="displayGreeting(event)">
@@ -16,12 +16,15 @@
     minlength="4" maxLength="19"> 
     <input name="letsGo" type="submit" value="let's go">
 </form></div> 
-
-</div>
+<div><button id="changeColor-btn" onmouseover="changeColor()" onmouseout="resetColor()" onclick="sillyClick()">
+    hover over this button ... or click it (if you dare)</button>
+    <img id="theCountImg" src="thecount.png" alt="an image of Count Dracula">
+</p></div>
+</header>
 <body>
 
     <div class="counter">
-            <h1>&#8212; the count &#8212;</h1> <!-- used an emdash code -->
+            <h1>&#8212; let's count &#8212;</h1> <!-- used an emdash code -->
             <h2 id="count-el">0</h2>
             <button id="increment-btn" onclick="increment()">finished row</button>
             <button id="save-btn" onclick="save()">save the count</button>

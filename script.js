@@ -44,3 +44,28 @@ function reset(){
     console.log(count)
     alert('you have reset your counter')
 }
+
+// createElement
+// <div><button id="changeColor-btn" onmouseover="changeColor()">Change the colors!</button>
+function changeColor(){
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.style.backgroundColor = '#0D090A';
+    });
+}
+function resetColor(){
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.style.backgroundColor = '';
+    });
+}
+
+function sillyClick(){
+    let img = document.getElementById("theCountImg");
+    img.style.display = 'block';
+    console.log('button clicked')
+    // Hide the image after 3 seconds (3000ms)
+    setTimeout(function() {
+        img.style.display = 'none';
+    }, 3000); // Change this duration to make it appear for a longer/shorter time
+}
