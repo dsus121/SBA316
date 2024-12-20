@@ -42,7 +42,7 @@ body {
 #greetingDark {
     color: black;
 }
-.counter {
+#counter {
     background-color: #250444;
     border: 3px solid #f0147;
     border-radius: 2rem;
@@ -56,7 +56,7 @@ h1 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 50%px;
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -70,6 +70,7 @@ button {
     width: 200px;
     margin-bottom: 5px;
     border-radius: 5px;
+    background: #912f56;
 }
 #changeColor-btn {
     background: #361F27;
@@ -96,4 +97,13 @@ button {
     position: relative;
     width: 100px;
     margin: auto;
+}
+
+.regDiv {
+    /* display: none; */
+}
+
+.specialDiv {
+    border: 1px solid #EAF2EF;
+
 }
