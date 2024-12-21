@@ -1,6 +1,6 @@
-console.log('is this thing on?')
+console.log('%cis this thing on?','color: purple')
 
-function displayGreeting(event) {
+function greeting(event) {
     event.preventDefault();
     const name = document.getElementById('name').value; // get the user's name
     document.getElementById('greeting').innerHTML = `Happy knitting, ${name}`; 
@@ -76,7 +76,7 @@ function validateEmail() {
         document.getElementById('emailError').textContent = '';
     }
 }
-console.log(email)
+console.log(email) // WHY IS THE SUBMIT BUTTON DISAPPEARING WHEN I TYPE IN THE TEXT FIELD?!
 
 function getLocation() {
     // fun little BOM method
@@ -84,19 +84,19 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
         document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
-    }
-    function showPosition(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
-        openMap(latitude, longitude);
-    }
-    function openMap(lat, lon) {
-        const mapUrl = `https://www.google.com/maps?q=${lat},${lon}&z=10`; // `z=15` is zoom level
-        window.open(mapUrl, '_blank');
-    }
+    } 
 }
 
+function showPosition(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
+    openMap(latitude, longitude);
+}
+function openMap(lat, lon) {
+    const mapUrl = `https://www.google.com/maps?q=${lat},${lon}&z=10`; // `z=15` is zoom level
+    window.open(mapUrl, '_blank');
+}
 
 
 // createElement
@@ -115,4 +115,3 @@ div.style.cssText = "width:auto; height:200px; Background: rgb(42, 42, 42)";
 document.body.appendChild(div);
 
 // createNewElement()
-// console.log(currentLocation)

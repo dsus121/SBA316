@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Row Counter</title>
+    <title>DC's Row Counter</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <header>
 
-
     <div id="greeting">
-        <form id="getName" class="form" onsubmit="displayGreeting(event)">
+        <form id="getName" class="form" onsubmit="greeting(event)">
             <label for="getName">What's your name?</label>
             <input type="text" id="name" name="name" align="center" placeholder="Barbara Gordon" required minlength="4"
-                maxLength="19">
+                maxLength="19" style="">
             <input name="letsGo" type="submit" value="let's go">
         </form>
     </div>
@@ -36,20 +35,30 @@
         <p style="font-size: smaller;" id="save-el">history: </p><br>
         <button id="reset-btn" onclick="reset()">reset</button>
     </div>
+    <div class="lists">
+        <ul style="list-style-type: none;"><h3>&#8212;  a few knitting resources &#8212; </h3>
+            <li><a href="https://www.ravelry.com/">Ravelry</a></li>
+            <li><a href="https://verypink.com/knitting-video-library/">Verypink</a></li>
+            <li><a href="https://knittingfever.com/store-locator">LYS locator</a></li>
+        </ul>
+    </div>
+    <div>  
+        <button type="button" id="playButton" onclick="location.href='popuzzle.html'">PRESS HERE for more</button>
+    </div>
     <div>
-        <h2>Enter your email address to save the data...</h2>
+        <h3></h3>
 
         <form id="emailForm" onsubmit="validateForm(event)">
-            <label for="email"></label>
+            <label for="email">Enter your email address to save the data...</label>
             <input type="email" id="email" name="email" required oninput="validateEmail()">
             <div id="emailError" class="error">
                 <button type="submit" class="button">Submit</button>
         </form>
-    </div><br>
-
+    </div><br><br>
+  
     <div class="regDiv">
         <p>Do you even know where you are ?</p>
-        <button onclick="getLocation()">WHERE AM I?!</button>
+        <button onclick="openMap()">WHERE AM I?!</button>
     </div>
         <div id="location"></div>
     
