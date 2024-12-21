@@ -11,7 +11,9 @@
 //     playPoemPuzzle()
 // });
 
-// function playPoemPuzzle() {
+// function playPoemPuzzle() {  <- tried to use a funtion, and hide the button
+// but i couldn't get all the parts to work at the same time
+// using backticks to preserve all the emdashes
     const poem = `Autumn — overlooked my Knitting — 
 Dyes — said He — have I — 
 Could disparage a Flamingo — 
@@ -22,35 +24,36 @@ It resemble Thee —
 And the little Border — Dusker — 
 For resembling Me — `;
 
-    const words = poem.split(" ");  // split the poem into words
-    const container = document.getElementById('puzzle-container');
-    // choose the location
+    const words = poem.split(" ");  // split the poem into words (so glad we practiced this!)
+    const container = document.getElementById('puzzle-container'); // initialize "container" to store the location of the puzzle div
 
-    // get container dimensions 
+    // get container dimensions ... BOM methods YAY!
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
 
     // function to generate a random position within the container 
     const getRandomPosition = (max) => Math.floor(Math.random() * max);
 
-    // loop through each word and create a div element
+    // loop through each word and create a div element ... forEach?
     words.forEach((word, index) => {
         let wordDiv = document.createElement('div');
         wordDiv.className = 'word';  // add class 
         wordDiv.id = `word${index + 1}`;  // set id based on index
-        wordDiv.textContent = word;  // set the text content
+        wordDiv.textContent = word;  // set the text content 
 
-        // set random position for the word 
+        // set random position for each word 
         let randomX = getRandomPosition(containerWidth - wordDiv.offsetWidth);
         let randomY = getRandomPosition(containerHeight - wordDiv.offsetHeight);
         wordDiv.style.left = `${randomX}px`;
         wordDiv.style.top = `${randomY}px`
 
-        container.appendChild(wordDiv); // add each word 
+        container.appendChild(wordDiv); // add each word <-- SCARY
+        // console.log(wordDiv); IT TOTALLY WORKED
+
     });
+    
 
-console.log("puzzle-container");
-
+// console.log(document.getElementById('puzzle-container');
 
 // }
 

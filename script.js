@@ -7,12 +7,12 @@ function greeting(event) {
     // document.querySelector("form").reset();
 }
 let letsGo = document.querySelector("form")
-console.log(letsGo)
-console.log(letsGo.name)
+// console.log(letsGo)
+// console.log(letsGo.name)
 
 let count = 0
 let countEl = document.getElementById("count-el")
-console.log(countEl)
+// console.log(countEl)
 
 function increment() {
     count = count + 1
@@ -21,7 +21,7 @@ function increment() {
 
 
 let saveEl = document.getElementById("save-el")
-console.log(saveEl)
+// console.log(saveEl)
 
 function save(){
     let countStr = count + " - "
@@ -31,11 +31,9 @@ function save(){
     console.log(count)
 }
 
-// add in a button to change the colors of the count
 
 "reset-btn"
 let resetEl = document.getElementById("reset-el")
-// confirm('Are you sure?')
 
 function reset(){
     let countStr = 0
@@ -71,9 +69,9 @@ function validateEmail() {
     const email = document.getElementById('email').value;
     const emailPattern = /^[^@]+@[^@]+\.[^@]+$/;
     if (!email.match(emailPattern)) {
-        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        // document.getElementById('emailError').textContent = 'Please enter a valid email address.';
     } else {
-        document.getElementById('emailError').textContent = '';
+        // document.getElementById('emailError').textContent = '';
     }
 }
 console.log(email) // WHY IS THE SUBMIT BUTTON DISAPPEARING WHEN I TYPE IN THE TEXT FIELD?!
@@ -109,8 +107,9 @@ function openMap(lat, lon) {
 // }
 
 let div = document.createElement('div');
-div.id = 'con';
-div.style.cssText = "width:auto; height:200px; Background: rgb(42, 42, 42)";
+div.id = 'khan';
+div.style.cssText = "width:auto; height:100px; Background: rgb(42, 42, 42); color:tan; font-size:10px;";
+div.innerText = " this div was created from the .js file "
 
 document.body.appendChild(div);
 
