@@ -74,7 +74,6 @@ function validateEmail() {
         // document.getElementById('emailError').textContent = '';
     }
 }
-console.log(email) // WHY IS THE SUBMIT BUTTON DISAPPEARING WHEN I TYPE IN THE TEXT FIELD?!
 
 function getLocation() {
     // fun little BOM method
@@ -89,28 +88,22 @@ function showPosition(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     document.getElementById("location").innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
-    openMap(latitude, longitude);
+    // openMap(lat, lon);
 }
-function openMap(lat, lon) {
-    const mapUrl = `https://www.google.com/maps?q=${lat},${lon}&z=10`; // `z=15` is zoom level
-    window.open(mapUrl, '_blank');
-}
-
-
-// createElement
-// function createNewElement() {
-//     currentLocation = ""
-//     const newDiv = document.createElement('div');
-//     newDiv.textContent = currentLocation;
-//     newDiv.classList.add('specialDiv'); // adding a class for styling
-//     document.body.appendChild(newDiv); // append (add) this new div to the body
+// function openMap(lat, lon) {
+//     const mapUrl = `https://www.google.com/maps?q=${lat},${lon}&z=10`; // `z=15` is zoom level
+//     window.open(mapUrl, '_blank');
 // }
+
 
 let div = document.createElement('div');
 div.id = 'khan';
-div.style.cssText = "width:auto; height:100px; Background: rgb(42, 42, 42); color:tan; font-size:10px;";
-div.innerText = " this div was created from the .js file "
+div.style.cssText = "width:auto; height:90px; Background: #250444; color:tan; font-size:10px;";
+div.innerText = `"Women like to sit down with trouble - as if it were knitting."
+ - Ellen Glasgow
+
+
+ this div was created from the .js file `
 
 document.body.appendChild(div);
 
-// createNewElement()

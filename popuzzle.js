@@ -38,7 +38,7 @@ For resembling Me — `;
     words.forEach((word, index) => {
         let wordDiv = document.createElement('div');
         wordDiv.className = 'word';  // add class 
-        wordDiv.id = `word${index + 1}`;  // set id based on index
+        wordDiv.id = `word${index + 1}`;  // set id based on index, ooo but add 1 so there's no word0
         wordDiv.textContent = word;  // set the text content 
 
         // set random position for each word 

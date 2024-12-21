@@ -13,8 +13,7 @@
     <div id="greeting">
         <form id="getName" class="form" onsubmit="greeting(event)">
             <label for="getName">What's your name?</label>
-            <input type="text" id="name" name="name" placeholder="Barbara Gordon" required minlength="4"
-                maxLength="19">
+            <input type="text" id="name" name="name" placeholder="Barbara Gordon" required minlength="4" maxLength="19">
             <input name="letsGo" type="submit" value="let's go">
         </form>
     </div>
@@ -35,33 +34,39 @@
         <p style="font-size: smaller;" id="save-el">history: </p><br>
         <button id="reset-btn" onclick="reset()">reset</button>
     </div>
+
     <div class="lists">
-        <ul style="list-style-type: none;"><h3>&#8212;  a few knitting resources &#8212; </h3>
-            <li><a href="https://www.ravelry.com/">Ravelry</a></li>
-            <li><a href="https://verypink.com/knitting-video-library/">Verypink</a></li>
-            <li><a href="https://knittingfever.com/store-locator">LYS locator</a></li>
-        </ul>
+        <div>
+            <h3>&#8212; a few knitting resources &#8212; </h3>
+            <a href="https://www.ravelry.com/" target='blank'>Ravelry</a> &
+            <a href="https://verypink.com/knitting-video-library/" target='blank'>Verypink</a>
+          & <a href="https://knittingfever.com/store-locator" target='blank'>LYS locator</a></div>
+        </div>
     </div>
-    <div>  
-        <button type="button" id="playButton" onclick="location.href='popuzzle.html'">
-            if you're brave, PRESS HERE for some fun</button>
+
+    <div class="regDiv"> <br>
+        <a href='popuzzle.html' target="_blank"><button type="button" id="playButton" class="darkButton">
+                if you're brave, PRESS HERE for some fun</button></a>
     </div>
-    <div><italic>In theory, enter your email address to save the data. 
-        I don't know how to store the data yet, nor actually send an email, so ...</italic>
+    
+    <div class="specialDiv">
+        <p>In theory, enter your email address to save the data.
+            I don't know how to store the data yet, nor actually send an email, so ...</p>
         <form id="emailForm">
             <label for="email"></label>
             <input type="email" id="email" name="email" required oninput="validateEmail()">
             <div id="emailError" class="error">
-                <button type="submit" class="button">Submit</button></div>
-        </form></div>
-    <br><br>
-  
-    <div class="regDiv">
-        <p>Do you even know where you are ?</p>
-        <button onclick="getLocation()">WHERE AM I?!</button>
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
     </div>
-        <div id="location"></div>
-    
+
+    <div class="locationDiv" id="location">
+        <p>Do you even know where you are?</p>
+        <button onclick="getLocation()">WHERE AM I?!</button>    <br>
+        <br><br>
+    </div>
+
 </body>
 
 </html>
