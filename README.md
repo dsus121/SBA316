@@ -21,7 +21,7 @@ Implement basic form validation using any combination of built-in HTML validatio
 - [x] Register at least two different event listeners and create the associated event handler functions.
 - [x] Use at least two Browser Object Model (BOM) properties or methods.
 - [x] Include at least one form and/or input with HTML attribute validation.
-- [ ] Include at least one form and/or input with DOM event-based validation.
+- [x] Include at least one form and/or input with DOM event-based validation.
 - [x] Ensure that the program runs without errors.
 - [x] Include a README file that contains a description of the application.
 - [ ] Level of effort displayed in creativity, presentation and user experience.
